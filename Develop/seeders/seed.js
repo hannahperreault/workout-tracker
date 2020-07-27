@@ -3,11 +3,15 @@ const db = require('../models/Workout');
 
 const PORT = process.env.PORT || 3000;
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/workouts', {
-  useNewUrlParser: true,
-  useFindAndModify: false,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  process.env.MONGODB_URI ||
+    'mongodb://user1:password1@ds157298.mlab.com:57298/heroku_nzj2flnx',
+  {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+  }
+);
 
 let workoutSeed = [
   {
