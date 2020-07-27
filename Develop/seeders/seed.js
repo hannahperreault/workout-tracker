@@ -1,6 +1,8 @@
 let mongoose = require('mongoose');
 const db = require('../models/Workout');
 
+const PORT = process.env.PORT || 5000;
+
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/workouts', {
   useNewUrlParser: true,
   useFindAndModify: false,
